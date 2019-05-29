@@ -2,11 +2,14 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 // import { linkTo } from '@storybook/addon-links';
 
 import { Button } from '@storybook/react/demo';
+import MyButton from '../src/components/Button';
 
 storiesOf('Basics|Button', module)
+    .addDecorator(withKnobs)
     .addWithJSX('all buttons', () => (
         <div>
             <p>Button that is used for forms</p>
@@ -49,6 +52,11 @@ storiesOf('Basics|Button', module)
                 {/*<Icon icon="link" />*/}
                 Link
             </Button>
+            <MyButton
+                // style={{fontFamily: 'BuloRounded'}}
+                size={select('size', ['regular', 'small', 'big'], 'regular')}
+                type={select('type', ['primary', 'secondary'], 'primary')}
+            >{text('children', 'Regular Button')}</MyButton>
         </div>))
     .addWithJSX('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
     .addWithJSX('with some emoji', () => (
