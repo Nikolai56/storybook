@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "paul-ui",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -18,6 +18,17 @@
   },
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  }
+    "build-storybook": "build-storybook",
+    "test": "echo \"No test specified\""
+  },
+  "description": "set of Paul's ui components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikolai56/storybook.git"
+  },
+  "author": "nick56",
+  "bugs": {
+    "url": "https://github.com/Nikolai56/storybook/issues"
+  },
+  "homepage": "https://github.com/Nikolai56/storybook#readme"
 }
